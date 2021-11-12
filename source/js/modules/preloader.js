@@ -6,6 +6,14 @@ const preloader = () => {
   const preloaderNode = document.querySelector('.js-preloader');
   const preloaderActionText = document.querySelector('.preloader__action-text');
 
+  if (preloaderNode) {
+    preloaderNode.classList.remove('preloader--nojs');
+  }
+
+  if (breakpointLG.matches) {
+    preloaderActionText.textContent = preloaderActionText.dataset.desktopText;
+  }
+
   if (breakpointMD.matches) {
     preloaderActionText.textContent = preloaderActionText.dataset.tabletText;
   }
