@@ -1,0 +1,69 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  height: calc(100 * var(--vh, 1vh));
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-default-white;
+}
+
+.preloader__content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-right: 25px;
+  padding-left: 25px;
+
+  height: 100%;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @include viewport--md {
+    max-width: 78%;
+  }
+}
+
+.preloader__action-text {
+  position: absolute;
+  bottom: 100px;
+
+  font-size: 24px;
+  line-height: 22px;
+}
+
+.preloader.is-loading {
+  .preloader__content {
+    svg {
+      animation: fade-in-top 0.7s ease-out;
+    }
+
+    .preloader__action-text {
+      animation: fade-in 0.8s ease-in-out, pulse 0.7s infinite ease-out alternate 0.4s;
+    }
+  }
+}
+
+.preloader.is-fade {
+  .preloader__content {
+    animation: fade-in-bottom 0.3s ease;
+    animation-fill-mode: both;
+  }
+}
+
+.preloader.is-hidden,
+.preloader:not(.js-preloader) {
+  display: none;
+}
