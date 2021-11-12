@@ -1,10 +1,13 @@
 .header {
   display: block;
-  opacity: 0;
 }
 
 .header.show {
-  animation: fade-in-bottom 0.3s ease-out 0.4s both;
+  animation-name: fade-in-bottom;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: both;
 }
 
 .header__wrapper {
