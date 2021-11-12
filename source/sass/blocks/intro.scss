@@ -1,0 +1,42 @@
+.intro {
+  display: flex;
+  height: 100vh;
+
+  padding-top: 44px;
+}
+
+.intro__row {
+  display: flex;
+  align-items: flex-end;
+}
+
+.intro__title {
+  margin: 0;
+  padding-right: 30px;
+
+  max-width: 62%;
+
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 1;
+  color: $color-neon-blue;
+}
+
+.intro__description {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+
+  max-width: 38%;
+
+  p {
+    margin-bottom: 0;
+
+    font-size: 30px;
+    line-height: 40px;
+
+    color: $color-default-black;
+
+    text-transform: lowercase;
+  }
+}
