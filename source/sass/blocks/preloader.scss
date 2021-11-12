@@ -47,23 +47,31 @@
 .preloader.is-loading {
   .preloader__content {
     svg {
-      animation: fade-in-top 0.7s ease-out;
+      animation-name: fade-in-top;
+      animation-duration: 0.7s;
+      animation-timing-function: ease-out;
     }
 
     .preloader__action-text {
-      animation: fade-in 0.8s ease-in-out, pulse 0.7s infinite ease-out alternate 0.4s;
+      animation: fade-in 0.7s ease-in-out, pulse 0.7s infinite ease-out alternate 0.4s;
     }
   }
 }
 
 .preloader.is-fade {
   .preloader__content {
-    animation: fade-in-bottom 0.3s ease;
+    animation-name: fade-in-bottom;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
     animation-fill-mode: both;
   }
 }
 
 .preloader.is-hidden,
 .preloader:not(.js-preloader) {
+  display: none;
+}
+
+.preloader--nojs {
   display: none;
 }
