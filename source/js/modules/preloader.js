@@ -10,23 +10,29 @@ const preloader = () => {
     preloaderNode.classList.remove('preloader--nojs');
   }
 
-  if (breakpointLG.matches) {
-    preloaderActionText.textContent = preloaderActionText.dataset.desktopText;
-  }
+  if (preloaderActionText) {
 
-  if (breakpointMD.matches) {
-    preloaderActionText.textContent = preloaderActionText.dataset.tabletText;
-  }
-
-  window.addEventListener('resize', () => {
-    if (breakpointMD.matches) {
-      preloaderActionText.textContent = preloaderActionText.dataset.tabletText;
-    } else {
+    if (breakpointLG.matches) {
       preloaderActionText.textContent = preloaderActionText.dataset.desktopText;
     }
-  });
 
-  if (!preloaderNode) return;
+    if (breakpointMD.matches) {
+      preloaderActionText.textContent = preloaderActionText.dataset.tabletText;
+    }
+
+    window.addEventListener('resize', () => {
+      if (breakpointMD.matches) {
+        preloaderActionText.textContent = preloaderActionText.dataset.tabletText;
+      } else {
+        preloaderActionText.textContent = preloaderActionText.dataset.desktopText;
+      }
+    });
+  }
+
+
+  if (!preloaderNode) {
+    return;
+  }
 
   class Preloader {
     constructor(el) {

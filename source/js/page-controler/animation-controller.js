@@ -12,24 +12,34 @@ if (intro) {
 }
 
 const initialAnimation = () => {
-  introAnimateEl.classList.add('intro__animate--show');
-  pageHeader.classList.add('show');
-  emblemLiga.classList.add('emblem--show');
-};
+  if (introAnimateEl) {
+    introAnimateEl.classList.add('intro__animate--show');
+  }
 
-const controlClassIntro = () => {
-  if (introAnimateEl.classList.contains('intro__animate--show')) {
-    if (introAnimateEl.classList.contains('intro__animate--show-description')) {
-      setTimeout(() => {
-        introAnimateEl.classList.add('intro__animate--hidden-description');
-      }, 150);
-    } else {
-      introAnimateEl.classList.add('intro__animate--show-description');
-    }
+  if (pageHeader) {
+    pageHeader.classList.add('show');
+  }
+
+  if (emblemLiga) {
+    emblemLiga.classList.add('emblem--show');
   }
 };
 
-introAnimateEl.addEventListener('click', (controlClassIntro));
+if (introAnimateEl) {
+  const controlClassIntro = () => {
+    if (introAnimateEl.classList.contains('intro__animate--show')) {
+      if (introAnimateEl.classList.contains('intro__animate--show-description')) {
+        setTimeout(() => {
+          introAnimateEl.classList.add('intro__animate--hidden-description');
+        }, 150);
+      } else {
+        introAnimateEl.classList.add('intro__animate--show-description');
+      }
+    }
+  };
+
+  introAnimateEl.addEventListener('click', (controlClassIntro));
+}
 
 export {
   initialAnimation
