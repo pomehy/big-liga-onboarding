@@ -156,11 +156,11 @@
   color: $color-neon-blue;
 
   @include viewport--lg {
-    font-size: calc (70px + (96 - 70) * (100vw - 769px)/(1024 - 769));
+    font-size: calc(70px + (96 - 70) * (100vw - 769px)/(1024 - 769));
   }
 
   @include viewport--md {
-    font-size: calc (46px + (96 - 46) * (100vw - 320px)/(768 - 320));
+    font-size: calc(46px + (96 - 46) * (100vw - 320px)/(768 - 320));
   }
 }
 
@@ -218,7 +218,7 @@
   text-transform: lowercase;
 
   @include viewport--lg {
-    font-size: calc (20px + (30 - 20) * (100vw - 769px) / (1024 - 769));
+    font-size: calc(20px + (30 - 20) * (100vw - 769px) / (1024 - 769));
   }
 
   @include viewport--md {
@@ -229,7 +229,7 @@
   }
 
   @include viewport--sm {
-    font-size: calc (24px + (30 - 24) * (100vw - 321px) / (768 - 321));
+    font-size: calc(24px + (30 - 24) * (100vw - 321px) / (768 - 321));
     line-height: 1.3;
   }
 }
