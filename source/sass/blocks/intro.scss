@@ -72,7 +72,7 @@
   align-items: flex-end;
 
   @include viewport--md {
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -140,7 +140,8 @@
   max-width: 65%;
 
   @include viewport--md {
-    margin-bottom: 14%;
+    margin-top: 23vh;
+    max-width: 100%;
   }
 }
 
@@ -159,7 +160,7 @@
   }
 
   @include viewport--md {
-    font-size: 96px;
+    font-size: calc(46px + (96 - 46)*(100vw - 320px)/(768 - 320));
   }
 }
 
@@ -172,6 +173,10 @@
 
   @include viewport--md {
     max-width: 316px
+  }
+
+  @include viewport--sm {
+    max-width: 270px
   }
 }
 
@@ -218,8 +223,13 @@
 
   @include viewport--md {
     max-width: 360px;
+    color: $color-default-white;
     font-size: 30px;
     line-height: 40px;
-    color: $color-default-white;
+  }
+
+  @include viewport--sm {
+    font-size: calc(24px + (30 - 24)*(100vw - 321px)/(768 - 321));
+    line-height: 1.3;
   }
 }

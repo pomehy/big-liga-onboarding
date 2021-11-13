@@ -34,6 +34,10 @@
   @include viewport--md {
     max-width: 78%;
   }
+
+  @include viewport--sm {
+    max-width: 100%;
+  }
 }
 
 .preloader__action-text {
@@ -42,6 +46,11 @@
 
   font-size: 24px;
   line-height: 22px;
+
+  @include viewport--sm {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
 .preloader.is-loading {
