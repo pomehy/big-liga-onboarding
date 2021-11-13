@@ -992,8 +992,8 @@ button,
             animation-name: hidden-right-to-left;
     -webkit-animation-duration: 0.2s;
             animation-duration: 0.2s;
-    -webkit-animation-timing-function: Ease-in;
-            animation-timing-function: Ease-in;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
     -webkit-animation-delay: 0s;
             animation-delay: 0s;
     -webkit-animation-fill-mode: both;
