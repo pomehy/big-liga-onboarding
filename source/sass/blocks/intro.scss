@@ -129,7 +129,7 @@
     .intro__description {
       animation-name: hidden-right-to-left;
       animation-duration: 0.2s;
-      animation-timing-function: Ease-in;
+      animation-timing-function: ease-in;
       animation-delay: 0s;
       animation-fill-mode: both;
     }
@@ -156,11 +156,11 @@
   color: $color-neon-blue;
 
   @include viewport--lg {
-    font-size: calc(70px + (96 - 70)*(100vw - 769px)/(1024 - 769));
+    font-size: calc (70px + (96 - 70) * (100vw - 769px)/(1024 - 769));
   }
 
   @include viewport--md {
-    font-size: calc(46px + (96 - 46)*(100vw - 320px)/(768 - 320));
+    font-size: calc (46px + (96 - 46) * (100vw - 320px)/(768 - 320));
   }
 }
 
@@ -172,11 +172,11 @@
   }
 
   @include viewport--md {
-    max-width: 316px
+    max-width: 316px;
   }
 
   @include viewport--sm {
-    max-width: 270px
+    max-width: 270px;
   }
 }
 
@@ -218,7 +218,7 @@
   text-transform: lowercase;
 
   @include viewport--lg {
-    font-size: calc(20px + (30 - 20)*(100vw - 769px)/(1024 - 769));
+    font-size: calc (20px + (30 - 20) * (100vw - 769px) / (1024 - 769));
   }
 
   @include viewport--md {
@@ -229,7 +229,7 @@
   }
 
   @include viewport--sm {
-    font-size: calc(24px + (30 - 24)*(100vw - 321px)/(768 - 321));
+    font-size: calc (24px + (30 - 24) * (100vw - 321px) / (768 - 321));
     line-height: 1.3;
   }
 }

@@ -10,7 +10,7 @@
   .emblem__zigzag {
     animation-name: fade-in-top;
     animation-duration: 0.25s;
-    animation-timing-function:  ease-in-out;
+    animation-timing-function: ease-in-out;
     animation-delay: 0.35s;
     animation-fill-mode: both;
   }
@@ -31,7 +31,7 @@
     }
 
     .emblem__zigzag--2 {
-      fill:  $color-torch-red;
+      fill: $color-torch-red;
     }
 
     .emblem__zigzag--3 {
@@ -56,7 +56,7 @@
 
   animation-name: fade-in;
   animation-duration: 0.4s;
-  animation-timing-function:  ease-in-out;
+  animation-timing-function: ease-in-out;
   animation-delay: 0.45s;
   animation-iteration-count: 6;
 
